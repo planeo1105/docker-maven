@@ -1,6 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-                      https://maven.apache.org/xsd/settings-1.0.0.xsd">
-  <localRepository>/usr/share/maven/ref/repository</localRepository>
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <localRepository>/usr/local/maven/repository</localRepository>
+ 
+  <proxies>
+    <proxy>
+      <id>jndz</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <username>deployment</username>
+      <password>jndz2016</password>
+      <host>121.196.232.60</host>
+      <port>8081</port>
+    </proxy>
+  </proxies>
+
+  <servers>
+    <server>
+      <id>jndz</id>
+      <username>deployment</username>
+      <password>jndz2016</password>
+    </server>
+  </servers>
+  
+  <mirrors>
+    <mirror>
+      <id>jndz</id>
+      <mirrorOf>*</mirrorOf>
+      <name>jndz</name>
+      <url>http://121.196.232.60:8081/nexus/content/groups/public/</url>
+    </mirror> 
+  </mirrors> 
+
 </settings>
